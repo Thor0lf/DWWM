@@ -1,0 +1,53 @@
+    <!-- Init Trumbowyg -->
+    <script>
+        $('#content').trumbowyg({
+            lang: 'fr',
+            btnsDef: {
+            // Create a new dropdown
+            image: {
+                dropdown: ['insertImage'],
+                ico: 'insertImage'
+            }
+        },
+        // Redefine the button panel
+        btns: [
+            ['viewHTML'],
+            ['formatting'],
+            ['strong', 'em', 'del'],
+            ['superscript', 'subscript'],
+            ['link'],
+            ['image'], // Our fresh created dropdown
+            ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
+            ['unorderedList', 'orderedList'],
+            ['horizontalRule'],
+            ['removeformat'],
+            ['fullscreen']
+        ],
+        plugins: {
+            // Add imagur parameters to upload plugin for demo purposes
+            upload: {
+                serverPath: 'https://api.imgur.com/3/image',
+                fileFieldName: 'image',
+                headers: {
+                    'Authorization': 'Client-ID 9e57cb1c4791cea'
+                },
+                urlPropertyName: 'data.link'
+            },
+        }});
+    </script>
+    <!-- Textarea article Trumbowyg -->
+    <script>
+        $('#content-article').trumbowyg({
+        btns: [
+        ],
+        //autogrow: true // To have the textarea as long as the text
+        });
+    </script>
+    <!-- Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Custom JS -->
+    <script src="/public/js/script.js"></script>
+    <!-- RGPD -->
+    <script type="text/javascript" src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script><script> window.start.init({Palette:"palette2",Mode:"banner bottom",Theme:"classic",LinkText:"En savoir plus",Message:"Ce site n'utilise que des cookies servant à son bon fonctionnement",ButtonText:"Je prends note",Time:"5",})</script>
+</body>
+</html>
